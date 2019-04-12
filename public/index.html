@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Default</title>
+
+    </head>
+
+    <body>
+        <p> Le statique fonctionne !</p>
+
+        <div id="app">
+            <article v-for="prod in product">
+                <h1>{{ prod.name }}</h1>
+                <aside> Stock: {{ prod.stock }} </aside>
+
+                <button v-on:click="deleteItem(prod)">Supprimer</button>
+            </article>
+        </div>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/app.js"></script>
+</html>
